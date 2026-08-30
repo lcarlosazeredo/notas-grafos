@@ -1,0 +1,1240 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Aula01/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Aula 02 | 12/08/2026 - Teoria de Grafos - 26.2</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#aula-02-12082026" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Teoria de Grafos - 26.2" class="md-header__button md-logo" aria-label="Teoria de Grafos - 26.2" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Teoria de Grafos - 26.2
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Aula 02 | 12/08/2026
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Teoria de Grafos - 26.2" class="md-nav__button md-logo" aria-label="Teoria de Grafos - 26.2" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Teoria de Grafos - 26.2
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aulas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Aulas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Aula01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 01 | 10/08/2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 02 | 12/08/2026
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 02 | 12/08/2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contagem-dupla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contagem Dupla
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Contagem Dupla">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ii" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        II)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definicao-21-grafo-simples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definição 2.1 — Grafo simples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definicao-22-adjacencia-e-incidencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definição 2.2 — Adjacência e incidência
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definicao-23-ordem-e-tamanho-de-um-grafo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definição 2.3 — Ordem e tamanho de um grafo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definicao-24-vizinhanca-aberta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definição 2.4 — Vizinhança aberta
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definicao-25-vizinhanca-fechada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definição 2.5 — Vizinhança fechada
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definicao-26-grau-de-um-vertice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definição 2.6 — Grau de um vértice
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definicao-27-grau-minimo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definição 2.7 — Grau mínimo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definicao-28-grau-maximo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definição 2.8 — Grau máximo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definicao-29-grafo-regular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definição 2.9 — Grafo regular
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proposicao-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proposição 2.1
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Proposição 2.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prova" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prova
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teorema-21-teorema-do-aperto-de-maos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teorema 2.1 — Teorema do Aperto de Mãos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Teorema 2.1 — Teorema do Aperto de Mãos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prova-exercicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prova (Exercício)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#corolario-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Corolário 2.1
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Corolário 2.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prova-exercicio_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prova (Exercício)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Listas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contagem-dupla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contagem Dupla
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Contagem Dupla">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ii" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        II)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definicao-21-grafo-simples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definição 2.1 — Grafo simples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definicao-22-adjacencia-e-incidencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definição 2.2 — Adjacência e incidência
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definicao-23-ordem-e-tamanho-de-um-grafo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definição 2.3 — Ordem e tamanho de um grafo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definicao-24-vizinhanca-aberta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definição 2.4 — Vizinhança aberta
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definicao-25-vizinhanca-fechada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definição 2.5 — Vizinhança fechada
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definicao-26-grau-de-um-vertice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definição 2.6 — Grau de um vértice
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definicao-27-grau-minimo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definição 2.7 — Grau mínimo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definicao-28-grau-maximo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definição 2.8 — Grau máximo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definicao-29-grafo-regular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definição 2.9 — Grafo regular
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proposicao-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proposição 2.1
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Proposição 2.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prova" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prova
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teorema-21-teorema-do-aperto-de-maos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teorema 2.1 — Teorema do Aperto de Mãos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Teorema 2.1 — Teorema do Aperto de Mãos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prova-exercicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prova (Exercício)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#corolario-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Corolário 2.1
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Corolário 2.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prova-exercicio_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prova (Exercício)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="aula-02-12082026">Aula 02 — 12/08/2026</h1>
+<h2 id="contagem-dupla">Contagem Dupla</h2>
+<p>Queremos mostrar que</p>
+<div class="arithmatex">\[
+\sum_{k=0}^{n}\binom{n}{k}=2^n.
+\]</div>
+<p>Podemos contar o número de subconjuntos de <span class="arithmatex">\([n]\)</span> de duas formas.</p>
+<h3 id="i">I)</h3>
+<p>Para cada <span class="arithmatex">\(i\in[n]\)</span>, cada <span class="arithmatex">\(i\)</span> está ou não está em um subconjunto <span class="arithmatex">\(A\)</span>.</p>
+<p>Pelo P.M. (Princípio da Multiplicação),</p>
+<div class="arithmatex">\[
+\underbrace{2\times\cdots\times2}_{n\text{ vezes}}=2^n.
+\]</div>
+<h3 id="ii">II)</h3>
+<p>Existem exatamente</p>
+<div class="arithmatex">\[
+\binom{n}{k}
+\]</div>
+<p>subconjuntos de <span class="arithmatex">\([n]\)</span> de tamanho <span class="arithmatex">\(k\)</span>.</p>
+<p>Como cada subconjunto de <span class="arithmatex">\([n]\)</span> tem tamanho <span class="arithmatex">\(k\)</span>, para algum</p>
+<div class="arithmatex">\[
+0\leq k\leq n,
+\]</div>
+<p>o número de subconjuntos de <span class="arithmatex">\([n]\)</span> é</p>
+<div class="arithmatex">\[
+\sum_{k=0}^{n}\binom{n}{k}.
+\]</div>
+<p>Portanto,</p>
+<div class="arithmatex">\[
+\sum_{k=0}^{n}\binom{n}{k}=2^n.
+\]</div>
+<hr />
+<h2 id="definicao-21-grafo-simples">Definição 2.1 — Grafo simples</h2>
+<p>Um <strong>grafo simples</strong>, ou simplesmente um <strong>grafo</strong>, é um par</p>
+<div class="arithmatex">\[
+G=(V,E),
+\]</div>
+<p>em que <span class="arithmatex">\(V\)</span> é um conjunto finito não vazio, chamado <strong>conjunto de vértices de <span class="arithmatex">\(G\)</span></strong>, e</p>
+<div class="arithmatex">\[
+E\subseteq\binom{V}{2}
+\]</div>
+<p>é chamado <strong>conjunto de arestas de <span class="arithmatex">\(G\)</span></strong>.</p>
+<p>Denotamos esses conjuntos também por</p>
+<div class="arithmatex">\[
+V(G)
+\]</div>
+<p>e</p>
+<div class="arithmatex">\[
+E(G).
+\]</div>
+<p>Como</p>
+<div class="arithmatex">\[
+E(G)\subseteq\binom{V(G)}{2},
+\]</div>
+<p>as arestas são formadas por pares de vértices distintos.</p>
+<p>Em particular, um grafo simples não possui laços.</p>
+<p>Além disso, denotamos uma aresta de <span class="arithmatex">\(G\)</span> como <span class="arithmatex">\(\{u,v\}\)</span>, ou simplesmente por</p>
+<div class="arithmatex">\[
+uv,
+\]</div>
+<p>se,</p>
+<div class="arithmatex">\[
+uv\in E
+\]</div>
+<p>e <span class="arithmatex">\(u,v\in V\)</span>, <span class="arithmatex">\(u\neq v\)</span>.</p>
+<hr />
+<h2 id="definicao-22-adjacencia-e-incidencia">Definição 2.2 — Adjacência e incidência</h2>
+<p>Sejam <span class="arithmatex">\(u,v\in V\)</span> tais que <span class="arithmatex">\(u\neq v\)</span>.</p>
+<p>Dizemos que <span class="arithmatex">\(u\)</span> e <span class="arithmatex">\(v\)</span> são <strong>adjacentes</strong> se</p>
+<div class="arithmatex">\[
+uv\in E.
+\]</div>
+<p>Além disso, dizemos que a aresta <span class="arithmatex">\(uv\)</span> <strong>incide</strong> em <span class="arithmatex">\(u\)</span> e <span class="arithmatex">\(v\)</span>.</p>
+<p>Os vértices <span class="arithmatex">\(u\)</span> e <span class="arithmatex">\(v\)</span> são chamados de <strong>extremos</strong> da aresta <span class="arithmatex">\(uv\)</span>.</p>
+<hr />
+<h2 id="definicao-23-ordem-e-tamanho-de-um-grafo">Definição 2.3 — Ordem e tamanho de um grafo</h2>
+<p>A <strong>ordem</strong> de um grafo <span class="arithmatex">\(G\)</span> é denotada por <span class="arithmatex">\(n\)</span> e corresponde ao número de vértices:</p>
+<div class="arithmatex">\[
+|V(G)|=n.
+\]</div>
+<p>O <strong>tamanho</strong> de um grafo <span class="arithmatex">\(G\)</span> é denotado por <span class="arithmatex">\(m\)</span> e corresponde ao número de arestas:</p>
+<div class="arithmatex">\[
+|E(G)|=m.
+\]</div>
+<hr />
+<h2 id="definicao-24-vizinhanca-aberta">Definição 2.4 — Vizinhança aberta</h2>
+<p>Seja <span class="arithmatex">\(v\in V\)</span>.</p>
+<p>A <strong>vizinhança de <span class="arithmatex">\(v\)</span> em <span class="arithmatex">\(G\)</span></strong> é definida por</p>
+<div class="arithmatex">\[
+N(v)=\{u\in V:uv\in E(G)\}.
+\]</div>
+<hr />
+<h2 id="definicao-25-vizinhanca-fechada">Definição 2.5 — Vizinhança fechada</h2>
+<p>A <strong>vizinhança fechada</strong> de <span class="arithmatex">\(v\)</span> em <span class="arithmatex">\(G\)</span> é definida por</p>
+<div class="arithmatex">\[
+N[v]=N(v)\cup\{v\}.
+\]</div>
+<hr />
+<h2 id="definicao-26-grau-de-um-vertice">Definição 2.6 — Grau de um vértice</h2>
+<p>O <strong>grau</strong> de um vértice <span class="arithmatex">\(v\)</span> é dado por</p>
+<div class="arithmatex">\[
+d(v)=|N(v)|.
+\]</div>
+<p>Ou seja, <span class="arithmatex">\(d(v)\)</span> é o número de vizinhos de <span class="arithmatex">\(v\)</span>.</p>
+<p>Como <span class="arithmatex">\(G\)</span> é simples e possui <span class="arithmatex">\(n\)</span> vértices,</p>
+<div class="arithmatex">\[
+0\leq d(v)\leq n-1,
+\qquad \forall v\in V.
+\]</div>
+<p>Um vértice <span class="arithmatex">\(v\in V\)</span> é dito <strong>isolado</strong> se</p>
+<div class="arithmatex">\[
+d(v)=0.
+\]</div>
+<p>Um vértice <span class="arithmatex">\(v\in V\)</span> é dito <strong>universal</strong> se</p>
+<div class="arithmatex">\[
+d(v)=n-1.
+\]</div>
+<hr />
+<h2 id="exemplo">Exemplo</h2>
+<p>Considere o grafo da figura apresentada em aula, com vértices</p>
+<div class="arithmatex">\[
+V=\{v_1,v_2,v_3,v_4,v_5\}.
+\]</div>
+<p>Os graus dos vértices são</p>
+<div class="arithmatex">\[
+d(v_1)=3,
+\]</div>
+<div class="arithmatex">\[
+d(v_2)=2,
+\]</div>
+<div class="arithmatex">\[
+d(v_3)=3,
+\]</div>
+<div class="arithmatex">\[
+d(v_4)=4,
+\]</div>
+<div class="arithmatex">\[
+d(v_5)=2.
+\]</div>
+<p>As respectivas vizinhanças são</p>
+<div class="arithmatex">\[
+N(v_1)=\{v_2,v_3,v_4\},
+\]</div>
+<div class="arithmatex">\[
+N(v_2)=\{v_1,v_4\},
+\]</div>
+<div class="arithmatex">\[
+N(v_3)=\{v_1,v_4,v_5\},
+\]</div>
+<div class="arithmatex">\[
+N(v_4)=\{v_1,v_2,v_3,v_5\},
+\]</div>
+<div class="arithmatex">\[
+N(v_5)=\{v_3,v_4\}.
+\]</div>
+<hr />
+<h2 id="definicao-27-grau-minimo">Definição 2.7 — Grau mínimo</h2>
+<p>O <strong>grau mínimo</strong> de um grafo <span class="arithmatex">\(G\)</span> é denotado por</p>
+<div class="arithmatex">\[
+\delta(G):=\min_{v\in V}d(v).
+\]</div>
+<hr />
+<h2 id="definicao-28-grau-maximo">Definição 2.8 — Grau máximo</h2>
+<p>O <strong>grau máximo</strong> de um grafo <span class="arithmatex">\(G\)</span> é denotado por</p>
+<div class="arithmatex">\[
+\Delta(G):=\max_{v\in V}d(v).
+\]</div>
+<hr />
+<h2 id="definicao-29-grafo-regular">Definição 2.9 — Grafo regular</h2>
+<p>Um grafo é <strong><span class="arithmatex">\(k\)</span>-regular</strong> se</p>
+<div class="arithmatex">\[
+d(v)=k,
+\qquad \forall v\in V.
+\]</div>
+<hr />
+<h2 id="proposicao-21">Proposição 2.1</h2>
+<p>Se <span class="arithmatex">\(G\)</span> é um grafo de ordem <span class="arithmatex">\(n\)</span>, então</p>
+<div class="arithmatex">\[
+|E(G)|\leq\binom{n}{2}.
+\]</div>
+<h3 id="prova">Prova</h3>
+<p>Como, por definição,</p>
+<div class="arithmatex">\[
+E\subseteq\binom{V}{2},
+\]</div>
+<p>temos</p>
+<div class="arithmatex">\[
+|E|\leq\left|\binom{V}{2}\right|.
+\]</div>
+<p>Como</p>
+<div class="arithmatex">\[
+|V|=n,
+\]</div>
+<p>segue que</p>
+<div class="arithmatex">\[
+\left|\binom{V}{2}\right|=\binom{n}{2}.
+\]</div>
+<p>Portanto,</p>
+<div class="arithmatex">\[
+|E|\leq\binom{n}{2}.
+\]</div>
+<p><span class="arithmatex">\(\square\)</span></p>
+<hr />
+<h2 id="teorema-21-teorema-do-aperto-de-maos">Teorema 2.1 — Teorema do Aperto de Mãos</h2>
+<p>Seja <span class="arithmatex">\(G\)</span> um grafo e seja</p>
+<div class="arithmatex">\[
+m:=|E(G)|.
+\]</div>
+<p>Então</p>
+<div class="arithmatex">\[
+\sum_{v\in V}d(v)=2m.
+\]</div>
+<h3 id="prova-exercicio"><span class="prova-exercicio">Prova (Exercício)</span></h3>
+<div class="prova-exercicio">
+
+</div>
+<hr />
+<h2 id="corolario-21">Corolário 2.1</h2>
+<p>Em todo grafo, o número de vértices de grau ímpar é par.</p>
+<h3 id="prova-exercicio_1"><span class="prova-exercicio">Prova (Exercício)</span></h3>
+<div class="admonition info">
+<p class="admonition-title">Exercício</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+        
+          
+          <a href="../Aula01/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Aula 01 | 10/08/2026">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Aula 01 | 10/08/2026
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/lcarlosazeredo/notas-grafos" target="_blank" rel="noopener" title="Repositório no GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.footer"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+    
+  </body>
+</html>
