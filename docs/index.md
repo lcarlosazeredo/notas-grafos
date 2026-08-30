@@ -1,21 +1,21 @@
-# Teoria de Grafos - IM/UFRJ
+# Teoria de Grafos
 
-Bem-vindo ao repositório de notas de aula da disciplina de **Teoria de Grafos**. Este portal foi desenvolvido para centralizar o material teórico, exercícios e listas ao longo do semestre de 26.2.
+Bem-vindo ao repositório de notas de aula da disciplina de **Teoria de Grafos**. Este portal foi desenvolvido para centralizar o material ao longo do semestre de 26.2.
 
 ---
 
 ### 📚 Sumário das Aulas
 
-As notas de cada aula serão adicionadas ao longo do semestre.
+Acesse diretamente as notas de cada encontro:
+
+| Aula | Título/Assunto | Link |
+| :--- | :--- | :--- |
+| **Aula 01** | Notações, Coloração e Conjuntos Livres de Soma | [:material-file-document: Ver Notas](aulas/Aula01.md) |
+| **Aula 02** | Grafos Simples, Vizinhança, Grau e Aperto de Mãos  | [:material-file-document: Ver Notas](aulas/Aula02.md) |
 
 ---
 
 ### 📝 Listas de Exercícios
 
-As listas e suas resoluções serão adicionadas conforme forem trabalhadas.
+As listas serão adicionadas aqui.
 
----
-
-<p align="center">
-  <small>Instituto de Matemática - UFRJ | 2026</small>
-</p>
