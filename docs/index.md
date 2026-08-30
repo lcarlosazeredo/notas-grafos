@@ -13,6 +13,7 @@ Acesse diretamente as notas de cada encontro:
 | **Aula 01** | Notações, Coloração e Conjuntos Livres de Soma | [:material-file-document: Ver Notas](aulas/Aula01.md) |
 | **Aula 02** | Grafos Simples, Vizinhança, Grau e Aperto de Mãos  | [:material-file-document: Ver Notas](aulas/Aula02.md) |
 | **Aula 03** | Complemento, Subgrafos, Cliques, Conjuntos Independentes e Isomorfismo | [:material-file-document: Ver Notas](aulas/Aula03.md) |
+| **Aula 04** | Grafos Bipartidos, Caminhos, Conexidade, Distância e Ciclos | [:material-file-document: Ver Notas](aulas/Aula04.md) |
 
 ---
 
