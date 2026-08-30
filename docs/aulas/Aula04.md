@@ -260,7 +260,7 @@ se $G$ consiste de um único caminho com $n$ vértices.
 
 Um grafo $G$ é bipartido se, e somente se, $G$ não contém ciclo ímpar.
 
-### <span class="prova-exercicio">Prova(=>): (Exercício)</span>
+### <span class="prova-exercicio">Prova$(\Rightarrow)$: (Exercício)</span>
 
 <div class="prova-exercicio">
 
