@@ -16,10 +16,5 @@ Acesse diretamente as notas de cada encontro:
 | **Aula 04** | Grafos Bipartidos, Caminhos, Conexidade, Distância e Ciclos | [:material-file-document: Ver Notas](aulas/Aula04.md) |
 | **Aula 05** | Caracterização de Grafos Bipartidos e Árvores | [:material-file-document: Ver Notas](aulas/Aula05.md) |
 | **Aula 06** | Pontes e Árvores Geradoras | [:material-file-document: Ver Notas](aulas/Aula06.md) |
-
----
-
-### 📝 Listas de Exercícios
-
-As listas serão adicionadas aqui.
+| **Aula 07** | Cortes de Arestas, Articulações e Conectividade | [:material-file-document: Ver Notas](aulas/Aula07.md) |
 
