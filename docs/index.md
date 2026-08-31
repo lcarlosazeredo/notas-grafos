@@ -15,6 +15,7 @@ Acesse diretamente as notas de cada encontro:
 | **Aula 03** | Complemento, Subgrafos, Cliques, Conjuntos Independentes e Isomorfismo | [:material-file-document: Ver Notas](aulas/Aula03.md) |
 | **Aula 04** | Grafos Bipartidos, Caminhos, Conexidade, Distância e Ciclos | [:material-file-document: Ver Notas](aulas/Aula04.md) |
 | **Aula 05** | Caracterização de Grafos Bipartidos e Árvores | [:material-file-document: Ver Notas](aulas/Aula05.md) |
+| **Aula 06** | Pontes e Árvores Geradoras | [:material-file-document: Ver Notas](aulas/Aula06.md) |
 
 ---
 
