@@ -45,4 +45,5 @@ nav:
     - Aula 04 | 19/08/2026: aulas/Aula04.md
     - Aula 05 | 24/08/2026: aulas/Aula05.md
     - Aula 06 | 26/08/2026: aulas/Aula06.md
-  - Listas: []
+  - Listas:
+    - Lista1: listas/lista1.md
