@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../Aula07/">
+        <link rel="prev" href="../Aula08/">
       
       
-        <link rel="next" href="../Aula09/">
+        <link rel="next" href="../../listas/lista1/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>Aula 08 | 02/09/2026 - Teoria de Grafos - 26.2</title>
+        <title>Aula 09 | 14/09/2026 - Teoria de Grafos - 26.2</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#aula-08-02092026" class="md-skip">
+        <a href="#aula-09-14092026" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Aula 08 | 02/09/2026
+              Aula 09 | 14/09/2026
             
           </span>
         </div>
@@ -475,6 +475,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../Aula08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aula 08 | 02/09/2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -494,7 +522,7 @@
   <span class="md-ellipsis">
     
   
-    Aula 08 | 02/09/2026
+    Aula 09 | 14/09/2026
   
 
     
@@ -512,7 +540,7 @@
   <span class="md-ellipsis">
     
   
-    Aula 08 | 02/09/2026
+    Aula 09 | 14/09/2026
   
 
     
@@ -538,10 +566,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#exemplos-conectividade" class="md-nav__link">
+  <a href="#grafos-eulerianos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Exemplos — Conectividade
+        Grafos Eulerianos
       
     </span>
   </a>
@@ -549,22 +577,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#teorema-81-caracterizacao-das-articulacoes-em-arvores" class="md-nav__link">
+  <a href="#definicao-91-ciclo-de-euler" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Teorema 8.1 — Caracterização das articulações em árvores
+        Definição 9.1 — Ciclo de Euler
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Teorema 8.1 — Caracterização das articulações em árvores">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teorema-91-caracterizacao-dos-grafos-eulerianos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teorema 9.1 — Caracterização dos grafos eulerianos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Teorema 9.1 — Caracterização dos grafos eulerianos">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ideia-da-prova" class="md-nav__link">
+  <a href="#prova" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ideia da prova
+        Prova
       
     </span>
   </a>
@@ -577,22 +616,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#corolario-81" class="md-nav__link">
+  <a href="#grafos-hamiltonianos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Corolário 8.1
+        Grafos Hamiltonianos
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Corolário 8.1">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definicao-92-ciclo-de-hamilton" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definição 9.2 — Ciclo de Hamilton
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definicao-93-grafo-hamiltoniano" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definição 9.3 — Grafo hamiltoniano
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teorema-92" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teorema 9.2
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Teorema 9.2">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#prova-exercicio" class="md-nav__link">
+  <a href="#prova_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prova (Exercício)
+        Prova
       
     </span>
   </a>
@@ -605,122 +677,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#teorema-82-relacao-entre-conectividade-conectividade-de-arestas-e-grau-minimo" class="md-nav__link">
+  <a href="#teorema-93-condicao-necessaria-para-hamiltonicidade" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Teorema 8.2 — Relação entre conectividade, conectividade de arestas e grau mínimo
+        Teorema 9.3 — Condição necessária para Hamiltonicidade
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Teorema 8.2 — Relação entre conectividade, conectividade de arestas e grau mínimo">
+    <nav class="md-nav" aria-label="Teorema 9.3 — Condição necessária para Hamiltonicidade">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ideia-da-prova_1" class="md-nav__link">
+  <a href="#prova-proxima-aula" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ideia da prova
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Ideia da prova">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#kappagleqdeltag" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        \(\kappa'(G)\leq\delta(G)\)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kappagleqkappag" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        \(\kappa(G)\leq\kappa'(G)\)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#definicao-81-bloco" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Definição 8.1 — Bloco
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#definicao-82-bloco-de-um-grafo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Definição 8.2 — Bloco de um grafo
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fatos-sobre-blocos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fatos sobre blocos
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#caracterizacao-de-grafos-r-conexos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Caracterização de grafos \(r\)-conexos
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#teorema-83-whitney" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Teorema 8.3 — Whitney
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Teorema 8.3 — Whitney">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ideia-da-prova_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ideia da prova
+        Prova (Próxima aula)
       
     </span>
   </a>
@@ -736,34 +708,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Aula09/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Aula 09 | 14/09/2026
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -885,10 +829,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#exemplos-conectividade" class="md-nav__link">
+  <a href="#grafos-eulerianos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Exemplos — Conectividade
+        Grafos Eulerianos
       
     </span>
   </a>
@@ -896,22 +840,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#teorema-81-caracterizacao-das-articulacoes-em-arvores" class="md-nav__link">
+  <a href="#definicao-91-ciclo-de-euler" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Teorema 8.1 — Caracterização das articulações em árvores
+        Definição 9.1 — Ciclo de Euler
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Teorema 8.1 — Caracterização das articulações em árvores">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teorema-91-caracterizacao-dos-grafos-eulerianos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teorema 9.1 — Caracterização dos grafos eulerianos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Teorema 9.1 — Caracterização dos grafos eulerianos">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ideia-da-prova" class="md-nav__link">
+  <a href="#prova" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ideia da prova
+        Prova
       
     </span>
   </a>
@@ -924,22 +879,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#corolario-81" class="md-nav__link">
+  <a href="#grafos-hamiltonianos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Corolário 8.1
+        Grafos Hamiltonianos
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Corolário 8.1">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definicao-92-ciclo-de-hamilton" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definição 9.2 — Ciclo de Hamilton
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definicao-93-grafo-hamiltoniano" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definição 9.3 — Grafo hamiltoniano
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teorema-92" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teorema 9.2
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Teorema 9.2">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#prova-exercicio" class="md-nav__link">
+  <a href="#prova_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prova (Exercício)
+        Prova
       
     </span>
   </a>
@@ -952,122 +940,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#teorema-82-relacao-entre-conectividade-conectividade-de-arestas-e-grau-minimo" class="md-nav__link">
+  <a href="#teorema-93-condicao-necessaria-para-hamiltonicidade" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Teorema 8.2 — Relação entre conectividade, conectividade de arestas e grau mínimo
+        Teorema 9.3 — Condição necessária para Hamiltonicidade
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Teorema 8.2 — Relação entre conectividade, conectividade de arestas e grau mínimo">
+    <nav class="md-nav" aria-label="Teorema 9.3 — Condição necessária para Hamiltonicidade">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ideia-da-prova_1" class="md-nav__link">
+  <a href="#prova-proxima-aula" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ideia da prova
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Ideia da prova">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#kappagleqdeltag" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        \(\kappa'(G)\leq\delta(G)\)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kappagleqkappag" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        \(\kappa(G)\leq\kappa'(G)\)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#definicao-81-bloco" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Definição 8.1 — Bloco
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#definicao-82-bloco-de-um-grafo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Definição 8.2 — Bloco de um grafo
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fatos-sobre-blocos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fatos sobre blocos
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#caracterizacao-de-grafos-r-conexos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Caracterização de grafos \(r\)-conexos
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#teorema-83-whitney" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Teorema 8.3 — Whitney
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Teorema 8.3 — Whitney">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ideia-da-prova_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ideia da prova
+        Prova (Próxima aula)
       
     </span>
   </a>
@@ -1096,185 +984,88 @@
 
 
 
-<h1 id="aula-08-02092026">Aula 08 — 02/09/2026</h1>
-<h2 id="exemplos-conectividade">Exemplos — Conectividade</h2>
-<p>Nos exemplos apresentados em aula, são comparadas a conectividade de vértices</p>
-<div class="arithmatex">\[
-\kappa(G)
-\]</div>
-<p>e a conectividade de arestas</p>
-<div class="arithmatex">\[
-\kappa'(G).
-\]</div>
-<p>Os exemplos ilustram diferentes valores possíveis para esses parâmetros.</p>
+<h1 id="aula-09-14092026">Aula 09 — 14/09/2026</h1>
+<h2 id="grafos-eulerianos">Grafos Eulerianos</h2>
+<h2 id="definicao-91-ciclo-de-euler">Definição 9.1 — Ciclo de Euler</h2>
+<p>Um <strong>ciclo de Euler</strong> é um passeio fechado que visita cada aresta do grafo exatamente uma vez.</p>
 <hr />
-<h2 id="teorema-81-caracterizacao-das-articulacoes-em-arvores">Teorema 8.1 — Caracterização das articulações em árvores</h2>
-<p>Um vértice <span class="arithmatex">\(v\)</span> de uma árvore é uma articulação se, e somente se,</p>
+<h2 id="teorema-91-caracterizacao-dos-grafos-eulerianos">Teorema 9.1 — Caracterização dos grafos eulerianos</h2>
+<p>Um grafo conexo não trivial é euleriano se, e somente se, o grau de cada um de seus vértices é par.</p>
+<h3 id="prova">Prova</h3>
+<p><span class="arithmatex">\((\Rightarrow)\)</span> Suponha que <span class="arithmatex">\(G\)</span> seja um grafo conexo não trivial e euleriano.</p>
+<p>Seja <span class="arithmatex">\(C\)</span> um passeio de Euler com início e fim no vértice <span class="arithmatex">\(u\)</span>.</p>
+<p>Cada vez que um vértice <span class="arithmatex">\(v\)</span> aparece no passeio <span class="arithmatex">\(C\)</span>, duas arestas incidentes a <span class="arithmatex">\(v\)</span> são contadas.</p>
+<p>Como um passeio euleriano passa por cada aresta exatamente uma vez, para todo</p>
 <div class="arithmatex">\[
-d(v)&gt;1.
+v\neq u,
 \]</div>
-<h3 id="ideia-da-prova">Ideia da prova</h3>
-<p>Se</p>
+<p>temos que</p>
 <div class="arithmatex">\[
-d(v)=0,
+d(v)
 \]</div>
-<p>então <span class="arithmatex">\(G\)</span> é o grafo trivial.</p>
-<p>Se</p>
+<p>é par.</p>
+<p>Similarmente,</p>
 <div class="arithmatex">\[
-d(v)=1,
+d(u)
 \]</div>
-<p>o grafo <span class="arithmatex">\(G-v\)</span> não tem ciclos e tem</p>
+<p>é par, pois <span class="arithmatex">\(C\)</span> começa e termina em <span class="arithmatex">\(u\)</span>.</p>
+<p>Logo, todo vértice de <span class="arithmatex">\(G\)</span> possui grau par.</p>
+<p><span class="arithmatex">\((\Leftarrow)\)</span> Suponha que <span class="arithmatex">\(G\)</span> seja um grafo conexo não trivial em que todo vértice possui grau par.</p>
+<p>Vamos construir um passeio de Euler em duas etapas.</p>
+<p><strong>Passo 1:</strong> Decompor as arestas de <span class="arithmatex">\(G\)</span> em ciclos.</p>
+<p><strong>Passo 2:</strong> Compor o passeio de Euler a partir dos ciclos obtidos no Passo 1.</p>
+<p>No Passo 1, começamos identificando um ciclo</p>
 <div class="arithmatex">\[
-m(G-v)=m(G)-1
+C^1
 \]</div>
-<p>e</p>
+<p>no grafo.</p>
+<p>Esse ciclo existe porque todos os vértices possuem grau par.</p>
+<p>Podemos então repetir a operação em relação a uma componente não trivial deste grafo.</p>
+<p>Assim, obtemos a decomposição.</p>
+<p>No Passo 2, começando por <span class="arithmatex">\(C^1\)</span>, compomos <span class="arithmatex">\(C^1\)</span> com um ciclo <span class="arithmatex">\(C^j\)</span> que tenha um vértice em comum com <span class="arithmatex">\(C^1\)</span>.</p>
+<p>O ciclo <span class="arithmatex">\(C^j\)</span> existe porque o grafo é conexo.</p>
+<p>A composição é realizada enquanto houver ciclos do Passo 1 que ainda não pertençam a esta etapa.</p>
+<p>Tomando, portanto, vértice <span class="arithmatex">\(a\)</span> e <span class="arithmatex">\(v\)</span> em <span class="arithmatex">\(C^1\)</span>, tal que <span class="arithmatex">\(v\)</span> também pertença a <span class="arithmatex">\(C^j\)</span>, percorremos <span class="arithmatex">\(C^1\)</span> até <span class="arithmatex">\(a\)</span>, percorremos todo o ciclo <span class="arithmatex">\(C^j\)</span> e retornamos a <span class="arithmatex">\(a\)</span>, continuando então o percurso de <span class="arithmatex">\(C^1\)</span>.</p>
+<p>Note que este é um passeio de Euler associado a <span class="arithmatex">\(C^1\)</span> e <span class="arithmatex">\(C^j\)</span>.</p>
+<p>Caso exista outro ciclo</p>
 <div class="arithmatex">\[
-n(G-v)=n(G)-1.
+C^k,
 \]</div>
-<p>Logo, <span class="arithmatex">\(G-v\)</span> é uma árvore.</p>
-<p>Por outro lado, se</p>
-<div class="arithmatex">\[
-d(v)&gt;1,
-\]</div>
-<p>então existem <span class="arithmatex">\(u,z\)</span> adjacentes a <span class="arithmatex">\(v\)</span>.</p>
-<p>Como</p>
-<div class="arithmatex">\[
-u,v,z
-\]</div>
-<p>é o único caminho entre <span class="arithmatex">\(u\)</span> e <span class="arithmatex">\(z\)</span>, temos</p>
-<div class="arithmatex">\[
-W(G-v)&gt;W(G).
-\]</div>
-<p>Portanto, <span class="arithmatex">\(v\)</span> é uma articulação.</p>
+<p>fazemos o mesmo procedimento, compondo <span class="arithmatex">\(C^k\)</span> ao <span class="arithmatex">\(C^1C^j\)</span>.</p>
+<p>Repetindo o procedimento até que todos os ciclos da decomposição tenham sido incorporados, obtemos um passeio fechado que utiliza cada aresta de <span class="arithmatex">\(G\)</span> exatamente uma vez.</p>
+<p>Logo, <span class="arithmatex">\(G\)</span> é euleriano.</p>
 <p><span class="arithmatex">\(\square\)</span></p>
 <hr />
-<h2 id="corolario-81">Corolário 8.1</h2>
-<p>Num grafo não trivial conexo, sempre existem pelo menos dois vértices que não são articulações.</p>
-<h3 id="prova-exercicio"><span class="prova-exercicio">Prova (Exercício)</span></h3>
-<div class="prova-exercicio">
-
-</div>
-
+<h2 id="grafos-hamiltonianos">Grafos Hamiltonianos</h2>
+<h2 id="definicao-92-ciclo-de-hamilton">Definição 9.2 — Ciclo de Hamilton</h2>
+<p>Um <strong>ciclo de Hamilton</strong> é um ciclo gerador para o grafo.</p>
 <hr />
-<h2 id="teorema-82-relacao-entre-conectividade-conectividade-de-arestas-e-grau-minimo">Teorema 8.2 — Relação entre conectividade, conectividade de arestas e grau mínimo</h2>
-<p>Para um grafo <span class="arithmatex">\(G\)</span>,</p>
-<div class="arithmatex">\[
-\kappa(G)\leq\kappa'(G)\leq\delta(G).
-\]</div>
-<h3 id="ideia-da-prova_1">Ideia da prova</h3>
-<h4 id="kappagleqdeltag"><span class="arithmatex">\(\kappa'(G)\leq\delta(G)\)</span></h4>
-<p>Seja <span class="arithmatex">\(v\)</span> um vértice tal que</p>
-<div class="arithmatex">\[
-d(v)=\delta(G).
-\]</div>
-<p>As arestas incidentes a <span class="arithmatex">\(v\)</span> definem um corte de arestas para <span class="arithmatex">\(G\)</span>.</p>
-<p>Assim,</p>
-<div class="arithmatex">\[
-\kappa'(G)\leq\delta(G).
-\]</div>
-<h4 id="kappagleqkappag"><span class="arithmatex">\(\kappa(G)\leq\kappa'(G)\)</span></h4>
-<p>Vimos que</p>
-<div class="arithmatex">\[
-\kappa(G)\leq n-1.
-\]</div>
-<p>Considere o menor corte de arestas</p>
-<div class="arithmatex">\[
-[S,\overline{S}]
-\]</div>
-<p>de <span class="arithmatex">\(G\)</span>.</p>
-<p><strong>Caso 1.</strong> Se todo vértice de <span class="arithmatex">\(S\)</span> é adjacente a todo vértice de <span class="arithmatex">\(\overline{S}\)</span>, então</p>
-<div class="arithmatex">\[
-|[S,\overline{S}]|
-=
-|S||\overline{S}|
-\geq n-1
-\geq\kappa(G).
-\]</div>
-<p><strong>Caso 2.</strong> Sejam</p>
-<div class="arithmatex">\[
-x\in S
-\]</div>
-<p>e</p>
-<div class="arithmatex">\[
-y\in\overline{S}
-\]</div>
-<p>tais que</p>
-<div class="arithmatex">\[
-xy\notin E(G).
-\]</div>
-<p>Considere</p>
-<div class="arithmatex">\[
-T=N_{\overline{S}}(x)
-\cup
-\{v\in S\mid v\neq x,\; N_{\overline{S}}(v)\neq\varnothing\}.
-\]</div>
-<p>Observe que todo caminho de <span class="arithmatex">\(x\)</span> para <span class="arithmatex">\(y\)</span> passa por <span class="arithmatex">\(T\)</span>.</p>
-<p>Logo, <span class="arithmatex">\(T\)</span> é um corte de vértices.</p>
-<p>Note que, tomando as arestas de <span class="arithmatex">\(x\)</span> para os vértices de</p>
-<div class="arithmatex">\[
-T\cap\overline{S}
-\]</div>
-<p>e uma aresta dos vértices de</p>
-<div class="arithmatex">\[
-T\cap S
-\]</div>
-<p>para cada vértice de <span class="arithmatex">\(\overline{S}\)</span>, temos <span class="arithmatex">\(|T|\)</span> arestas distintas que pertencem a</p>
-<div class="arithmatex">\[
-[S,\overline{S}].
-\]</div>
-<p>Assim,</p>
-<div class="arithmatex">\[
-\kappa'(G)
-=
-|[S,\overline{S}]|
-\geq
-|T|
-\geq
-\kappa(G).
-\]</div>
-<p>Portanto,</p>
-<div class="arithmatex">\[
-\kappa(G)\leq\kappa'(G)\leq\delta(G).
-\]</div>
+<h2 id="definicao-93-grafo-hamiltoniano">Definição 9.3 — Grafo hamiltoniano</h2>
+<p>Um grafo que admite um ciclo de Hamilton é dito <strong>hamiltoniano</strong>.</p>
+<hr />
+<h2 id="teorema-92">Teorema 9.2</h2>
+<p>Todo grafo hamiltoniano é 2-conexo.</p>
+<h3 id="prova_1">Prova</h3>
+<p>Considere <span class="arithmatex">\(G\)</span> hamiltoniano e seja <span class="arithmatex">\(C\)</span> um ciclo hamiltoniano de <span class="arithmatex">\(G\)</span>.</p>
+<p>Como a remoção de qualquer vértice de <span class="arithmatex">\(C\)</span> não desconecta <span class="arithmatex">\(C\)</span>, então não desconecta <span class="arithmatex">\(G\)</span>.</p>
+<p>Logo, <span class="arithmatex">\(G\)</span> não possui vértice de articulação e, portanto, é 2-conexo.</p>
 <p><span class="arithmatex">\(\square\)</span></p>
 <hr />
-<h2 id="definicao-81-bloco">Definição 8.1 — Bloco</h2>
-<p>Um <strong>bloco</strong> é um grafo conexo que não possui articulação.</p>
-<hr />
-<h2 id="definicao-82-bloco-de-um-grafo">Definição 8.2 — Bloco de um grafo</h2>
-<p>Um <strong>bloco</strong> de um grafo <span class="arithmatex">\(G\)</span> é um subgrafo maximal com relação à propriedade de ser um bloco.</p>
-<hr />
-<h2 id="fatos-sobre-blocos">Fatos sobre blocos</h2>
-<p><strong>Fato 1.</strong> Dois blocos diferentes em um grafo têm, no máximo, um vértice em comum.</p>
-<p><strong>Fato 2.</strong> Cada aresta de <span class="arithmatex">\(G\)</span> está em um único bloco.</p>
-<p>Portanto, os blocos formam uma partição de</p>
+<h2 id="teorema-93-condicao-necessaria-para-hamiltonicidade">Teorema 9.3 — Condição necessária para Hamiltonicidade</h2>
+<p>Se <span class="arithmatex">\(G\)</span> é hamiltoniano e</p>
 <div class="arithmatex">\[
-E(G).
+S\subset V(G)
 \]</div>
-<hr />
-<h2 id="caracterizacao-de-grafos-r-conexos">Caracterização de grafos <span class="arithmatex">\(r\)</span>-conexos</h2>
-<ul>
-<li>
-<p><span class="arithmatex">\(G\)</span> é <strong>1-conexo</strong> se, e somente se, para qualquer par de vértices <span class="arithmatex">\(u,v\)</span>, existe pelo menos um caminho entre eles.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(G\)</span> é <strong>2-conexo</strong> se, e somente se, para qualquer par de vértices <span class="arithmatex">\(u,v\)</span>, existem pelo menos dois caminhos sem vértices em comum, exceto <span class="arithmatex">\(u\)</span> e <span class="arithmatex">\(v\)</span>.</p>
-</li>
-</ul>
-<blockquote>
-<p><span class="arithmatex">\(\hookrightarrow\)</span> <strong>Teorema de Whitney</strong></p>
-</blockquote>
-<ul>
-<li><span class="arithmatex">\(G\)</span> é <strong><span class="arithmatex">\(r\)</span>-conexo</strong> se, e somente se, para qualquer par de vértices <span class="arithmatex">\(u,v\)</span>, existem pelo menos <span class="arithmatex">\(r\)</span> caminhos sem vértices em comum, exceto <span class="arithmatex">\(u\)</span> e <span class="arithmatex">\(v\)</span>.</li>
-</ul>
-<blockquote>
-<p><span class="arithmatex">\(\hookrightarrow\)</span> <strong>Teorema de Menger</strong></p>
-</blockquote>
-<hr />
-<h2 id="teorema-83-whitney">Teorema 8.3 — Whitney</h2>
-<h3 id="ideia-da-prova_2">Ideia da prova</h3>
-<p><span class="arithmatex">\((\Leftarrow)\)</span> Direto.</p>
-<p><span class="prova-exercicio"><span class="arithmatex">\((\Rightarrow)\)</span> (Lista)</span></p>
+<p>é qualquer subconjunto próprio não vazio de vértices, então</p>
+<div class="arithmatex">\[
+W(G-S)\leq |S|
+\]</div>
+<p>Ou seja, <span class="arithmatex">\(G-S\)</span> possui, no máximo,</p>
+<div class="arithmatex">\[
+|S|
+\]</div>
+<p>componentes conexas.</p>
+<h3 id="prova-proxima-aula"><span class="prova-exercicio">Prova (Próxima aula)</span></h3>
 <div class="prova-exercicio">
 
 </div>
@@ -1307,7 +1098,7 @@ E(G).
       <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
         
           
-          <a href="../Aula07/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Aula 07 | 31/08/2026">
+          <a href="../Aula08/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Aula 08 | 02/09/2026">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1317,20 +1108,20 @@ E(G).
                 Anterior
               </span>
               <div class="md-ellipsis">
-                Aula 07 | 31/08/2026
+                Aula 08 | 02/09/2026
               </div>
             </div>
           </a>
         
         
           
-          <a href="../Aula09/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Aula 09 | 14/09/2026">
+          <a href="../../listas/lista1/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Lista1">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Próximo
               </span>
               <div class="md-ellipsis">
-                Aula 09 | 14/09/2026
+                Lista1
               </div>
             </div>
             <div class="md-footer__button md-icon">
