@@ -336,6 +336,78 @@ $$
 
 <div class="prova-exercicio">
 
+Para cada \(u\in V(G)\),
+
+<br>
+
+\[
+d(u)=|N(u)|
+\]
+
+<br>
+
+Se \(v\in N(u)\), então
+
+<br>
+
+\[
+uv\in E(G)
+\]
+
+<br>
+
+Além disso,
+
+<br>
+
+\[
+v\in N(u)\iff u\in N(v)
+\]
+
+<br>
+
+Assim, cada aresta
+
+<br>
+
+\[
+uv\in E(G)
+\]
+
+<br>
+
+é contada exatamente duas vezes na soma
+
+<br>
+
+\[
+\sum_{v\in V(G)} d(v)
+\]
+
+<br>
+
+uma vez no grau de \(u\) e outra vez no grau de \(v\).
+
+<br>
+
+Portanto,
+
+<br>
+
+\[
+\sum_{v\in V(G)} d(v)
+=
+2|E(G)|
+=
+2m
+\]
+
+<br>
+
+\[
+\square
+\]
+
 </div>
 ---
 
@@ -345,4 +417,124 @@ Em todo grafo, o número de vértices de grau ímpar é par.
 
 ### <span class="prova-exercicio">Prova (Exercício)</span>
 
-!!! info "Exercício"
+<div class="prova-exercicio">
+
+Defina
+
+<br>
+
+\[
+V_{\text{ímpar}}
+=
+\{v\in V : d(v)\text{ é ímpar}\}
+\]
+
+<br>
+
+e
+
+<br>
+
+\[
+V_{\text{par}}
+=
+\{v\in V : d(v)\text{ é par}\}
+\]
+
+<br>
+
+Então,
+
+<br>
+
+\[
+\sum_{v\in V} d(v)
+=
+\sum_{v\in V_{\text{ímpar}}} d(v)
++
+\sum_{v\in V_{\text{par}}} d(v)
+\]
+
+<br>
+
+Pelo Teorema do Aperto de Mãos,
+
+<br>
+
+\[
+\sum_{v\in V} d(v)
+=
+2m
+=
+2|E(G)|
+\]
+
+<br>
+
+Logo,
+
+<br>
+
+\[
+\sum_{v\in V_{\text{ímpar}}} d(v)
++
+\sum_{v\in V_{\text{par}}} d(v)
+=
+2m
+\]
+
+<br>
+
+Como
+
+<br>
+
+\[
+\sum_{v\in V_{\text{par}}} d(v)
+\]
+
+<br>
+
+é uma soma de números pares, ela é par.
+
+<br>
+
+Assim,
+
+<br>
+
+\[
+\sum_{v\in V_{\text{ímpar}}} d(v)
+=
+2m
+-
+\sum_{v\in V_{\text{par}}} d(v)
+\]
+
+<br>
+
+também é par.
+
+<br>
+
+Como todos os termos dessa soma são ímpares, a quantidade de termos deve ser par.
+
+<br>
+
+Portanto,
+
+<br>
+
+\[
+|V_{\text{ímpar}}|
+\]
+
+<br>
+
+é par.
+
+\[
+\square
+\]
+
+</div>
