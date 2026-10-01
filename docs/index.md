@@ -20,3 +20,4 @@ Acesse diretamente as notas de cada encontro:
 | **Aula 08** | Conectividade, Grau Mínimo, Blocos e Caminhos Disjuntos | [:material-file-document: Ver Notas](aulas/Aula08.md) |
 | **Aula 09** | Grafos Eulerianos e Hamiltonianos | [:material-file-document: Ver Notas](aulas/Aula09.md) |
 | **Aula 10** | Grafos Hamiltonianos e Teorema de Dirac | [:material-file-document: Ver Notas](aulas/Aula10.md) |
+| **Aula 11** | Emparelhamentos e Teorema de Berge | [:material-file-document: Ver Notas](aulas/Aula11.md) |
