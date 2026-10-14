@@ -1,6 +1,6 @@
 # Aula 11 — 30/09/2026
 
-## Emparelhamentos
+## Emparelhamento
 
 Um **emparelhamento** $M\subseteq E(G)$ é um subconjunto das arestas tal que quaisquer par de arestas em $M$ são não adjacentes.
 
