@@ -23,3 +23,7 @@ mkdocs-material>=9.0.0
 # Se instalar algo novo, usa:
 # (Windows) pip freeze > requirements.txt
 # (Linux)   pip3 freeze > requirements.txt
+
+# Como converter .pdf para .svg e add imagem:
+# inkscape exemplo.pdf --export-filename=exemplo.svg
+# ![Exemplo de grafo](../caminho/exemplo.svg)
