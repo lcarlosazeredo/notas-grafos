@@ -23,3 +23,4 @@ Acesse diretamente as notas de cada encontro:
 | **Aula 11** | Emparelhamento e Teorema de Berge | [:material-file-document: Ver Notas](aulas/Aula11.md) |
 | **Aula 12** | Diferença Simétrica, Emparelhamento e Teorema de Hall | [:material-file-document: Ver Notas](aulas/Aula12.md) |
 | **Aula 13** | Coloração de Arestas, Teorema de Vizing e Teorema de König | [:material-file-document: Ver Notas](aulas/Aula13.md) |
+| **Aula 14** | Teorema de König e Teorema de Ramsey | [:material-file-document: Ver Notas](aulas/Aula14.md) |
