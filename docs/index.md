@@ -25,3 +25,4 @@ Acesse diretamente as notas de cada encontro:
 | **Aula 13** | Coloração de Arestas, Teorema de Vizing e Teorema de König | [:material-file-document: Ver Notas](aulas/Aula13.md) |
 | **Aula 14** | Teorema de König e Teorema de Ramsey | [:material-file-document: Ver Notas](aulas/Aula14.md) |
 | **Aula 15** | Limites dos Números de Ramsey | [:material-file-document: Ver Notas](aulas/Aula15.md) |
+| **Aula 16** | Coloração de Vértices, Grafos Críticos e Teorema de Brooks | [:material-file-document: Ver Notas](aulas/Aula16.md) |
